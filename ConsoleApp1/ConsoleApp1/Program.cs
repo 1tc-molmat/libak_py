@@ -18,13 +18,34 @@ namespace ConsoleApp1
                 Console.Write($"{szam}, ");
             }
         }
+        
 
+        static int Osszegez ( int[] t)
+        {
+            int osszeg = 0;
+            for (int i = 0; i < t.Length; i++)
+            {
+                if (t[i] <= 3)
+                {
+                    osszeg = t[i];
+                }
+
+            }
+            return osszeg;
+        }
+
+
+        static void kiir_eredmeny(int roka_libainak_sulya)
+        {
+
+        }
 
         static void Main(string[] args)
         {
 
             int[] libak = { 1, 5, 2, 3, 4 };
             Kiir(libak,"libak sullyai");
+            int hany_kilo_liba_ehet_meg_a_roka = Osszegez(libak);
             Console.WriteLine("gomb");
             Console.ReadKey();
 
